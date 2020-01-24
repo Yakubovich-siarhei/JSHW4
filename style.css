@@ -1,0 +1,91 @@
+
+#form,
+#form-fern,
+#form-spruse {
+  display: none;
+}  
+
+td {
+  border: 1px solid black;
+}
+
+.demotable {
+  border-collapse: collapse;
+  counter-reset: schetchik;  
+  /* счётчик с названием "schetchik" работает в рамках класса .demotable */ 
+}
+.demotable tr {
+  counter-increment: schetchik;  
+  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */ 
+}
+.demotable td,
+.demotable tr:before {
+  padding: .1em .5em;
+  border: 1px solid #E7D5C0;
+}
+.demotable tr:before {
+  content: counter(schetchik);  
+  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */ 
+  display: table-cell;
+  vertical-align: middle;
+  color: #978777;
+}
+
+.ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+
+.headerList {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 800px;
+}
+
+/* .checkboxBar {
+  display: flex;
+} */
+
+.main,
+.main2 {
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.table2 ul,
+.table ul {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.table2 ul li:nth-child(2),
+.table ul li:nth-child(2)  {
+  width: 30%;
+}
+
+.divy {
+  width: 200px;
+  height: 50px;
+  background: #bdb0a3;
+}
+
+.divy2 {
+  display: flex;
+  width: 100px;
+  height: 50px;
+  background: #8b6a49;
+}
+
+.table2 {
+  display: none;
+}
+
+.divName {
+  display: inline-block;
+}
